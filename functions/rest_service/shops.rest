@@ -1,0 +1,31 @@
+### Change the IP address below to your PC's IP address. Remain the port number 3000 unchanged
+@baseUrl = http://localhost:5001/utm-xchange-yeasin/us-central1/utmXchange
+
+### shops 1 : Define the HTTP Request to get the list of shops
+GET {{baseUrl}}/shops
+
+###  Getting a shops of given id
+GET {{baseUrl}}/shops/7fbcQm6K1IkiN9gf8KVj
+
+### shops 5 : Define the HTTP Request to update the status of a given shops (whether is completed or not)
+PATCH {{baseUrl}}/shops/7fbcQm6K1IkiN9gf8KVj
+Content-Type: application/json
+
+{
+    "distance": "6O KM"
+}
+
+### shops 6 : Define the HTTP Request to create a new shops
+POST {{baseUrl}}/shops
+Content-Type: application/json
+
+{
+    "title": "New shops",
+    "distance": "30 KM",
+    "address": "no address please",
+    "priceRange": "Dont ask me please",
+    "type": "Dont ask me please"
+}
+
+### shops 7 : Define the HTTP Request to delete a given shops
+DELETE {{baseUrl}}/shops/7fbcQm6K1IkiN9gf8KVj

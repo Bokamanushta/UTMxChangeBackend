@@ -1,0 +1,37 @@
+### Change the IP address below to your PC's IP address. Remain the port number 3000 unchanged
+@baseUrl = http://localhost:5001/utm-xchange-yeasin/us-central1/utmXchange
+
+### notices 1 : Define the HTTP Request to get the list of notices
+GET {{baseUrl}}/notices
+
+### notices 1 : Define the HTTP Request to get the list of notices
+GET {{baseUrl}}/notices/events
+
+### notices 1 : Define the HTTP Request to get the list of notices
+GET {{baseUrl}}/notices/officials
+
+###  Getting a notices of given id
+GET {{baseUrl}}/notices/8XUQ0rtdW8p50a4HsTue
+
+### notices 5 : Define the HTTP Request to update the status of a given notices (whether is completed or not)
+PATCH {{baseUrl}}/notices/8XUQ0rtdW8p50a4HsTue
+Content-Type: application/json
+
+{
+    "type": "officials"
+}
+
+### notices 6 : Define the HTTP Request to create a new notices
+POST {{baseUrl}}/notices
+Content-Type: application/json
+
+{
+    "title": "New notices",
+    "type": "event",
+    "description": "no description please",
+    "attatchment": "Dont ask me please",
+    "date": "Dont ask me please"
+}
+
+### notices 7 : Define the HTTP Request to delete a given notices
+DELETE {{baseUrl}}/notices/8XUQ0rtdW8p50a4HsTue

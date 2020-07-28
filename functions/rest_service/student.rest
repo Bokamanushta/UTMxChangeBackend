@@ -1,0 +1,56 @@
+### Change the IP address below to your PC's IP address. Remain the port number 3000 unchanged
+@baseUrl = https://us-central1-utm-xchange-yeasin.cloudfunctions.net/utmXchange
+### students 1 : Define the HTTP Request to get the list of students
+GET {{baseUrl}}/students
+
+### students 1 : Define the HTTP Request to get the list of students
+POST {{baseUrl}}/students/verify
+Content-Type: application/json
+
+{
+    "username": "raqibul",
+    "password": "raqibul"
+}
+
+### students 1 : Define the HTTP Request to get the list of students
+POST {{baseUrl}}/students/semester
+Content-Type: application/json
+
+{
+    "semester": "2020/21-02"
+}
+
+###  Getting a students of given id
+GET {{baseUrl}}/students/aAtvy7P22Exc15zRSU0U
+
+### students 5 : Define the HTTP Request to update the status of a given students (whether is completed or not)
+PATCH {{baseUrl}}/students/aAtvy7P22Exc15zRSU0U
+Content-Type: application/json
+
+{
+    "age": "90"
+}
+
+### students 6 : Define the HTTP Request to create a new students
+POST {{baseUrl}}/students
+Content-Type: application/json
+
+{
+    "image":"assets/images/avator.jpg",
+    "country":"Bangladej",
+    "gender":"Female",
+    "university":"University of Guinkiold",
+    "description":"Hi there, I am Xiang. I will be happy if you want to reach me. stay safe stay funky",
+    "faculty":"FE",
+    "password":"asdaudn",
+    "passport":"JI9asdsad0O990",
+    "name":"Xiang sadad Koilen",
+    "registerStatus":false,
+    "semester":"2020/21-02",
+    "age":"21",
+    "email":"hue@asdasdasd.com",
+    "username":"Xiaasdasdnf.holand"
+}
+
+### students 7 : Define the HTTP Request to delete a given students
+DELETE {{baseUrl}}/students/aAtvy7P22Exc15zRSU0U

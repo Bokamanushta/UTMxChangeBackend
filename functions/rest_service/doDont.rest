@@ -1,0 +1,29 @@
+### Change the IP address below to your PC's IP address. Remain the port number 3000 unchanged
+@baseUrl = http://localhost:5001/utm-xchange-yeasin/us-central1/utmXchange
+
+### CheckList 1 : Define the HTTP Request to get the list of dodonts
+GET {{baseUrl}}/dodonts
+
+###  Getting a dodonts of given id
+GET {{baseUrl}}/dodonts/ClCsTzRQTOGObaYiva60
+
+### dodonts 5 : Define the HTTP Request to update the status of a given dodonts (whether is completed or not)
+PATCH {{baseUrl}}/dodonts/ClCsTzRQTOGObaYiva60
+Content-Type: application/json
+
+{
+    "type": "do"
+}
+
+### dodonts 6 : Define the HTTP Request to create a new dodonts
+POST {{baseUrl}}/dodonts
+Content-Type: application/json
+
+{
+    "title": "New dodonts",
+    "type": "do",
+    "description": "no description please"
+}
+
+### dodonts 7 : Define the HTTP Request to delete a given dodonts
+DELETE {{baseUrl}}/dodonts/RXQgh9q8bpBdgBDoeUTe

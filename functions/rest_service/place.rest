@@ -1,0 +1,30 @@
+### Change the IP address below to your PC's IP address. Remain the port number 3000 unchanged
+@baseUrl = http://localhost:5001/utm-xchange-yeasin/us-central1/utmXchange
+
+### CheckList 1 : Define the HTTP Request to get the list of places
+GET {{baseUrl}}/places
+
+###  Getting a places of given id
+GET {{baseUrl}}/places/M58O4MHIflmiOXr9uJpn
+
+### places 5 : Define the HTTP Request to update the status of a given places (whether is completed or not)
+PATCH {{baseUrl}}/places/M58O4MHIflmiOXr9uJpn
+Content-Type: application/json
+
+{
+    "distance": "2O KM"
+}
+
+### places 6 : Define the HTTP Request to create a new places
+POST {{baseUrl}}/places
+Content-Type: application/json
+
+{
+    "title": "New places",
+    "distance": "30 KM",
+    "description": "no description please",
+    "imageLocation": "Dont ask me please"
+}
+
+### places 7 : Define the HTTP Request to delete a given places
+DELETE {{baseUrl}}/places/M58O4MHIflmiOXr9uJpn

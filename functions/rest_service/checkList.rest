@@ -1,0 +1,38 @@
+### Change the IP address below to your PC's IP address. Remain the port number 3000 unchanged
+@baseUrl = http://localhost:5001/utm-xchange-yeasin/us-central1/utmXchange
+
+### CheckList 1 : Define the HTTP Request to get the list of checklists
+GET {{baseUrl}}/checklists
+
+### CheckList 2 : Define the HTTP Request to get the list of checklists
+GET {{baseUrl}}/checklists/tips
+
+### CheckList 3 : Define the HTTP Request to get the list of checklists
+GET {{baseUrl}}/checklists/personal
+
+### CheckList 4 : Define the HTTP Request to get the list of checklists
+GET {{baseUrl}}/checklists/documents
+
+###  Getting a checklists of given id
+GET {{baseUrl}}/checklists/aFxBNaiFn5PPeAVsWvQy
+
+### checklists 5 : Define the HTTP Request to update the status of a given checklists (whether is completed or not)
+PATCH {{baseUrl}}/checklists/aFxBNaiFn5PPeAVsWvQy
+Content-Type: application/json
+
+{
+    "value": false
+}
+
+### checklists 6 : Define the HTTP Request to create a new checklists
+POST {{baseUrl}}/checklists
+Content-Type: application/json
+
+{
+    "title": "New checklists",
+    "value": true,
+    "type": "personal"
+}
+
+### checklists 7 : Define the HTTP Request to delete a given checklists
+DELETE {{baseUrl}}/checklists/aFxBNaiFn5PPeAVsWvQy
