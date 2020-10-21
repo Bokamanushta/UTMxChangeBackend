@@ -1,6 +1,6 @@
 # UTM Exchange
 
-The name of this application is UTM Exchange and the stakeholder is UTM International. The main goal of this project is to help and guide exchange students and staff under inbound mobility program who come here in UTM for a very short period of time (mostly one or two semesters) and not very familiar with MALAYSIA and as well as the surroundings of UTM.
+The name of this application is UTM Exchange and the stakeholder is UTM International. The main goal of this project is to help and guide exchange students and staff under inbound mobility program who come here in UTM for a very short period of time (mostly one or two semesters) and not very familiar with MALAYSIA and as well as the surroundings of UTM. This is the backend code for the application. 
 
 ## Functioanlities
 
